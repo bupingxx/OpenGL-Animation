@@ -32,11 +32,11 @@ ___
 
 ​	`Blinn-Phong`光照模型 , 是对 `Phong `光照模型中镜面反射光的一种改进，他们的区别是，把`dot(V,R)`换成了`dot(N,H)`，其中`H`为半角向量，位于法线`N`和光线`L`的角平分线方向。`Blinn-Phong`模型的镜面反射光可表示为：
 
-![image-20220105112047895](C:\Users\82458\Desktop\github\OpenGL-Animation\img\image-1.png)
+![image-1](https://github.com/bupingxx/OpenGL-Animation/blob/main/img/image-1.png)
 
 ​	其中`H = (L + V) / | L+V |`，计算`H`比`Phong`模型中计算反射向量`R`更快速。
 
-![image-20220105112101989](C:\Users\82458\Desktop\github\OpenGL-Animation\img\image-2.png)
+![image-2](https://github.com/bupingxx/OpenGL-Animation/blob/main/img/image-2.png)
 
 
 
@@ -46,7 +46,7 @@ ___
 
 ​	shadow mapping 的原理是从光源的角度出发，渲染获得此时场景对应的深度贴图， 这里储存的是各个像素到光源的距离。然后再从摄像机的视角出发，渲染每个像素，将每个像素的坐标从摄像机的view空间转成灯光的标准设置坐标。其x,y分量除以w就可以对shadow map进行采样了。如果此点到灯光的距离大于采样出来的值说明处于阴影当中。否则应该照亮，被照亮的部分此时就根据光照模型，显示对应的颜色。
 
-![image-20220105112522667](C:\Users\82458\Desktop\github\OpenGL-Animation\img\image-3.png)
+![image-3](https://github.com/bupingxx/OpenGL-Animation/blob/main/img/image-3.png)
 
 
 
@@ -80,11 +80,11 @@ ___
 
 ​	阴影效果：
 
-![image-20220223230942467](C:\Users\82458\Desktop\github\OpenGL-Animation\img\image-4.png)
+![image-4](https://github.com/bupingxx/OpenGL-Animation/blob/main/img/image-4.png)
 
 ​	动画：
 
-![image-20220223231004105](C:\Users\82458\Desktop\github\OpenGL-Animation\img\image-5.png)
+![image-5](https://github.com/bupingxx/OpenGL-Animation/blob/main/img/image-5.png)
 
 
 
